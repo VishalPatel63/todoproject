@@ -21,7 +21,9 @@ const app = express();
 // load config from env file
 app.use(cors({
   origin:"https://todoproject-steel.vercel.app/",
-  credentials:true,
+    credentials: true,  // Ensure cookies are allowed if you're using them
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  // Allow specific HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'],  // Allow specific headers
 }));
 require('dotenv').config();
 const PORT = process.env.PORT || 3000;
