@@ -20,7 +20,7 @@ const app = express();
 
 // load config from env file
 app.use(cors({
-  origin:"http://localhost:3000",
+  origin:"https://todoproject-steel.vercel.app/",
   credentials:true,
 }));
 require('dotenv').config();
